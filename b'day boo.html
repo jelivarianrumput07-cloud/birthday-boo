@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>happy birthday boo🧚🧚</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animasi tema Zootopia -->
+<div class="zoo-anim">
+  <span>🐰</span>
+  <span>🦊</span>
+  <span>🐯</span>
+  <span>🐼</span>
+  <span>🦁</span>
+</div>
+
+<div class="slider">
+
+  <!-- SLIDE 1 -->
+  <div class="slide active">
+    <img src="images/slide1.png" style="width:150px;">
+    <h1>Happy Birthday 🎂</h1>
+    <p class="slide-text">
+
+      Selamat ulang tahun yaa sayanggg 🤍  
+      Yeayyyy anak mamah udah 18 tahunn,
+      May you be surrounded by good things!!.
+    </p>
+    <button onclick="nextSlide()">Next ➜</button>
+  </div>
+
+  <!-- SLIDE 2 (KALIMAT KHUSUS BUAT DIA) -->
+  <div class="slide"> 
+    <img src="images/slide2.png" class="slide-img">
+    <p>
+      For my bf:
+    </p>
+    <p>
+      Happy birthday to someone who will always hold a special
+      spot in my heart. Di hari istimewa kmu ini, kmu harus tau betapa kamu dicintai. Inget yaa kamu tuh gak sendirian, kamu punya keluarga kmu, dannn yapp aku yang akan selalu mendukung kmu dalam segala hal. Aku cuma mau ngucapin terima kasih atas semua usaha yang telah kamu lakukan dan aku menghargai semuanya. Aku selalu bangga dengan pencapaian kecil kmu dan aku tau ini baru permulaan.
+    </p>
+    <p>
+      Kamu sering kelihatan santai,  
+      tapi sebenernya kamu mikirin banyak hal.  
+      Kamu tipe yang jalan pelan, tapi konsisten dan yup tipe
+      yang selalu bodo amatan.
+    </p>
+    <p>
+      Di umur yang sekarang ini,  
+      semoga kamu makin yakin sama diri kamu sendiri.  
+      Kamu gak harus sempurna buat jadi berarti 🤍
+    </p>
+    <button onclick="nextSlide()">Next ➜</button>
+  </div>
+
+  <!-- SLIDE 3 (HUBUNGAN KALIAN) -->
+  <div class="slide">
+    <p>
+      Tentang kita, mungkin gak selalu mulus.  
+      Ada capeknya, ada berantemnya,  
+      tapi aku bersyukur masih bisa jalan bareng kamu.
+      Terima kasih atas semua momen indah yang kamu bawa
+      ke dalam hidupku.
+    </p>
+    <p>
+      Semoga ke depannya kita bisa lebih saling ngerti,  
+      lebih sabar, dan sama-sama belajar  
+      tanpa saling ninggalin.
+    </p>
+    <button onclick="nextSlide()">Next ➜</button>
+  </div>
+
+  <!-- SLIDE 4 (PENUTUP) -->
+  <div class="slide">
+    <img src="images/slide4.png" class="slide-img">
+
+    <p>
+      Makasih ya udah jadi diri kamu sendiri.  
+      Aku bangga sama proses yang kamu jalanin,  
+      bahkan yang gak semua orang tau.
+    </p>
+    <p>
+      Semoga langkah kamu selalu dimudahin  
+      dan hal baik selalu nemuin kamu 🤍
+      Happy birthday my loveee
+    </p>
+    <p class="from">— dari aku</p>
+    <button onclick="nextSlide()">Lasttt</button>
+  </div>
+  
+    <!-- SLIDE 5 (Gemayy) -->
+  <div class="slide gift-slide">
+  <h2>Last one 💝</h2>
+
+  <img src="images/kado.png" class="gift" id="gift">
+
+  <p class="tap-text">tap kadonya yaa 🤍</p>
+
+  <img src="images/kupon.png" class="coupon hidden" id="coupon">
+
+
+  <p class="coupon-text hidden">
+    coupon ini berlaku selamanya!!
+    bisa ditukar kapan aja tanpa kadaluarsa.
+    Makasih ya udah lahir, karena dengan itu aku bisa kenal kamu 🤍
+    
+  </p>
+  </div>
+
+
+</div>
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function nextSlide() {
+    slides[current].classList.remove("active");
+    current++;
+    if (current >= slides.length) current = slides.length - 1;
+    slides[current].classList.add("active");
+  }
+
+  const gift = document.getElementById("gift");
+  const coupon = document.getElementById("coupon");
+  const couponText = document.querySelector(".coupon-text");
+
+  if (gift) {
+    gift.addEventListener("click", () => {
+      coupon.classList.remove("hidden");
+      couponText.classList.remove("hidden");
+      gift.style.display = "none";
+    });
+  }
+</script>
+
+</body>
+</html>
+<script>
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "♡";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 300);
+</script>
+<span class="corner">💐</span>
+
+
+
